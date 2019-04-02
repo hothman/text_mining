@@ -1,0 +1,157 @@
+
+PMID- 2397329
+OWN - NLM
+STAT- MEDLINE
+DCOM- 19901012
+LR  - 20181113
+IS  - 0092-8240 (Print)
+IS  - 0092-8240 (Linking)
+VI  - 52
+IP  - 4
+DP  - 1990
+TI  - Diffusion regulated growth characteristics of a spherical prevascular carcinoma.
+PG  - 549-82
+AB  - Recently a mathematical model of the prevascular phases of tumor growth by
+      diffusion has been investigated (S.A. Maggelakis and J.A. Adam, Math. Comput.
+      Modeling, in press). In this paper we examine in detail the results and
+      implications of that mathematical model, particularly in the light of recent
+      experimental work carried out on multicellular spheroids. The overall growth
+      characteristics are determined in the present model by four parameters: Q, gamma,
+      b, and delta, which depend on information about inhibitor production rates,
+      oxygen consumption rates, volume loss and cell proliferation rates, and measures 
+      of the degree of non-uniformity of the various diffusion processes that take
+      place. The integro-differential growth equation is solved for the outer spheroid 
+      radius R0(t) and three related inner radii subject to the solution of the
+      governing time-independent diffusion equations (under conditions of diffusive
+      equilibrium) and the appropriate boundary conditions. Hopefully, future
+      experimental work will enable reasonable bounds to be placed on parameter values 
+      referred to in this model: meanwhile, specific experimentally-provided initial
+      data can be used to predict subsequent growth characteristics of in vitro
+      multicellular spheroids. This will be one objective of future studies.
+FAU - Adam, J A
+AU  - Adam JA
+AD  - Department of Mathematics and Statistics, Old Dominion University, Norfolk, VA
+      23529-0077.
+FAU - Maggelakis, S A
+AU  - Maggelakis SA
+LA  - eng
+PT  - Journal Article
+PT  - Research Support, U.S. Gov't, Non-P.H.S.
+PL  - United States
+TA  - Bull Math Biol
+JT  - Bulletin of mathematical biology
+JID - 0401404
+RN  - 0 (Growth Inhibitors)
+SB  - IM
+MH  - Animals
+MH  - Cell Division
+MH  - Diffusion
+MH  - Growth Inhibitors/metabolism
+MH  - Mathematics
+MH  - Models, Biological
+MH  - Necrosis
+MH  - Neoplasms, Experimental/blood supply/metabolism/*pathology
+MH  - Oxygen Consumption
+EDAT- 1990/01/01 00:00
+MHDA- 1990/01/01 00:01
+CRDT- 1990/01/01 00:00
+PHST- 1990/01/01 00:00 [pubmed]
+PHST- 1990/01/01 00:01 [medline]
+PHST- 1990/01/01 00:00 [entrez]
+PST - ppublish
+SO  - Bull Math Biol. 1990;52(4):549-82.
+
+PMID- 2397328
+OWN - NLM
+STAT- MEDLINE
+DCOM- 19901012
+LR  - 20181113
+IS  - 0092-8240 (Print)
+IS  - 0092-8240 (Linking)
+VI  - 52
+IP  - 4
+DP  - 1990
+TI  - A deterministic model of the cell cycle.
+PG  - 535-47
+AB  - The variability of the duration of the cell cycle is explained by the phenomenon 
+      of sensitive dependence upon initial conditions; as may occur in deterministic
+      non-linear systems. Chaotic dynamics of a system is the result of this sensitive 
+      dependence. First a deterministic system is formulated that is equivalent to the 
+      Smith-Martin transition probability model of the cell cycle. Next the model is
+      extended to a dynamic process that ranges over the cell generations. A
+      deterministic non-linear relationship between the cycle time of the mother and
+      daughter cell is established. It clarifies the variability of mother-daughter
+      correlation for the different cell types. The model is fitted to two different
+      cell cultures; it shows that the graph of the non-linear relation has the same
+      shape for different cell types.
+FAU - Grasman, J
+AU  - Grasman J
+AD  - Department of Mathematics, State University of Utrecht, The Netherlands.
+LA  - eng
+PT  - Journal Article
+PL  - United States
+TA  - Bull Math Biol
+JT  - Bulletin of mathematical biology
+JID - 0401404
+SB  - IM
+MH  - Animals
+MH  - *Cell Cycle
+MH  - Cell Division
+MH  - Mathematics
+MH  - *Models, Biological
+EDAT- 1990/01/01 00:00
+MHDA- 1990/01/01 00:01
+CRDT- 1990/01/01 00:00
+PHST- 1990/01/01 00:00 [pubmed]
+PHST- 1990/01/01 00:01 [medline]
+PHST- 1990/01/01 00:00 [entrez]
+PST - ppublish
+SO  - Bull Math Biol. 1990;52(4):535-47.
+
+PMID- 2379021
+OWN - NLM
+STAT- MEDLINE
+DCOM- 19900912
+LR  - 20181113
+IS  - 0092-8240 (Print)
+IS  - 0092-8240 (Linking)
+VI  - 52
+IP  - 3
+DP  - 1990
+TI  - Minimum message length encoding and the comparison of macromolecules.
+PG  - 431-53
+AB  - A comparison of inductive inference known as minimum message length encoding is
+      applied to string comparison in molecular biology. The question of whether or not
+      two strings are related and, if so, of how they are related and the problem of
+      finding a good theory of string mutation are treated as inductive inference
+      problems. The method allows the posterior odds-ratio of two string alignments or 
+      of two models of string mutation to be computed. The connection between models of
+      mutation and existing string alignment algorithms is made explicit. A fast
+      minimum message length alignment algorithm is also described.
+FAU - Allison, L
+AU  - Allison L
+AD  - Department of Computer Science, Monash University, Australia.
+FAU - Yee, C N
+AU  - Yee CN
+LA  - eng
+PT  - Journal Article
+PT  - Research Support, Non-U.S. Gov't
+PL  - United States
+TA  - Bull Math Biol
+JT  - Bulletin of mathematical biology
+JID - 0401404
+SB  - IM
+MH  - Base Sequence
+MH  - *Genetic Code
+MH  - Mathematics
+MH  - *Models, Genetic
+MH  - Molecular Biology/*methods
+EDAT- 1990/01/01 00:00
+MHDA- 1990/01/01 00:01
+CRDT- 1990/01/01 00:00
+PHST- 1990/01/01 00:00 [pubmed]
+PHST- 1990/01/01 00:01 [medline]
+PHST- 1990/01/01 00:00 [entrez]
+PST - ppublish
+SO  - Bull Math Biol. 1990;52(3):431-53.
+

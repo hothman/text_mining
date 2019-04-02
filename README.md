@@ -1,1 +1,1 @@
-# text_mining
+# README
