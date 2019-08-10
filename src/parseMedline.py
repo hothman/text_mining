@@ -6,8 +6,11 @@ import sys
 import re 
 from nltk.tokenize import word_tokenize
 from nltk.probability import FreqDist
+from nltk.corpus import stopwords 
+from nltk.stem.snowball import SnowballStemmer
+from nltk import WordNetLemmatizer
 
-inputfile = "../data/concatenated_medline.txt"
+inputfile = "./onepaper.txt"
 myMEDLINE  = open(inputfile, 'r' )
 Medlinetxt = myMEDLINE.read()
 myMEDLINE.close()
@@ -23,8 +26,26 @@ def parse(text):
 		mytext.append( text.replace('\n', ' ')  ) 
 	return ' '.join( mytext )
 
-mytext =  parse(Medlinetxt) 
+	
+def get_title(text):
+	mytext=text.split("\n")
+	for line in mytext:
+		if "TI  - " in line:
+			title = line.split("TI  - ")[1]
+			return title 
 
-# tokenizing: separate the words and convert to a list 
-tokenized_word=word_tokenize(mytext)
-print( tokenized_word )
+def tokenize_remove_stop_words(text): 
+	tokenized_text=word_tokenize(text.lower())
+	filtered_words = [word for word in tokenized_text if word not in stopwords.words('english')]
+	stemmer = SnowballStemmer("english")
+	stemmed_words = [ stemmer.stem( word  ) for word in filtered_words ]
+	return stemmed_words
+
+def get_coutries_nationalities(country_list_file, file_nationalities):
+	with open(country_list_file, 'r') as file:
+		countries = file.read().lower().splitlines() 
+	with open(file_nationalities, 'r') as file:
+		nationalities = file.read().lower().splitlines() 
+	return countries, nationalities
+
+
