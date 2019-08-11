@@ -24,8 +24,7 @@ def parse(text):
 
 def get_PMID(text):
 	splitted=text.split()
-	print(splitted[1])
-
+	return splitted[1]
 
 def get_title(text):
 	mytext=text.split("\n")
@@ -52,7 +51,6 @@ def check_occurence(countries, nationalities, corpus):
 	lexicon = countries+nationalities
 	for word in corpus: 
 		if word in lexicon:
-			print("PASS", word)
 			return "PASS"
 
 if __name__ == "__main__": 
@@ -60,18 +58,20 @@ if __name__ == "__main__":
 	parser.add_argument("--medline", help="path to medline file")
 	parser.add_argument("--countries", help="path to the file containing the names of countries")
 	parser.add_argument("--nationalities", help="path to the file containing the nationalities")
-
 	args = parser.parse_args()
-
 	assert args.medline != None, 'You must provide a medline text file'
 	myMEDLINE  = open( args.medline, 'r' )
 	Medlinetxt = myMEDLINE.read()
 	myMEDLINE.close()
 	mytext =  parse(Medlinetxt)
 	mytitle = get_title(Medlinetxt)
-	get_PMID(Medlinetxt)
+	PMID=get_PMID(Medlinetxt)
 	countries, nationalities = get_coutries_nationalities(args.countries, args.nationalities)
 	tokenized_text=tokenize_remove_stop_words_stemmize(mytext)
 	tokenized_title=tokenize_remove_stop_words_stemmize(mytitle)
 	text_title = tokenized_text + tokenized_title
-	check_occurence(countries, nationalities, text_title)
+	is_pass = check_occurence(countries, nationalities, text_title)
+	if is_pass == "PASS":
+		print(PMID,"\t",is_pass)
+
+
