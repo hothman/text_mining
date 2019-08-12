@@ -40,15 +40,12 @@ def tokenize_remove_stop_words_stemmize(text):
 	stemmed_words = [ stemmer.stem( word  ) for word in filtered_words ]
 	return stemmed_words
 
-def get_coutries_nationalities(country_list_file, file_nationalities):
-	with open(country_list_file, 'r') as file:
-		countries = file.read().lower().splitlines() 
-	with open(file_nationalities, 'r') as file:
-		nationalities = file.read().lower().splitlines() 
-	return countries, nationalities
+def get_lexicon(lexicon):
+	with open(lexicon, 'r') as file:
+		lexicon = file.read().lower().splitlines() 
+	return lexicon
 
-def check_occurence(countries, nationalities, corpus):
-	lexicon = countries+nationalities
+def check_occurence(lexicon, corpus):
 	for word in corpus: 
 		if word in lexicon:
 			return "PASS"
@@ -56,8 +53,7 @@ def check_occurence(countries, nationalities, corpus):
 if __name__ == "__main__": 
 	parser = argparse.ArgumentParser(description="text mining for medline file format")
 	parser.add_argument("--medline", help="path to medline file")
-	parser.add_argument("--countries", help="path to the file containing the names of countries")
-	parser.add_argument("--nationalities", help="path to the file containing the nationalities")
+	parser.add_argument("--lexicon", help="path to the file containing the nationalities")
 	args = parser.parse_args()
 	assert args.medline != None, 'You must provide a medline text file'
 	myMEDLINE  = open( args.medline, 'r' )
@@ -66,11 +62,12 @@ if __name__ == "__main__":
 	mytext =  parse(Medlinetxt)
 	mytitle = get_title(Medlinetxt)
 	PMID=get_PMID(Medlinetxt)
-	countries, nationalities = get_coutries_nationalities(args.countries, args.nationalities)
+	lexicon = get_lexicon(args.lexicon)
 	tokenized_text=tokenize_remove_stop_words_stemmize(mytext)
 	tokenized_title=tokenize_remove_stop_words_stemmize(mytitle)
 	text_title = tokenized_text + tokenized_title
-	is_pass = check_occurence(countries, nationalities, text_title)
+	is_pass = check_occurence(lexicon, text_title)
+	print('processing PMID', PMID  )
 	if is_pass == "PASS":
 		print(PMID,"\t",is_pass)
 
