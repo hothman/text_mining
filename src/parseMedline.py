@@ -23,8 +23,11 @@ def parse(text):
 	return ' '.join( mytext )
 
 def get_PMID(text):
-	splitted=text.split()
-	return splitted[1]
+	try:
+		splitted=text.split()
+		return splitted[1]
+	except:
+		return "WARNING"
 
 def get_title(text):
 	mytext=text.split("\n")
@@ -43,12 +46,14 @@ def tokenize_remove_stop_words_stemmize(text):
 def get_lexicon(lexicon):
 	with open(lexicon, 'r') as file:
 		lexicon = file.read().lower().splitlines() 
+	lexicon = [word for word in lexicon if word not in ["ga", "san"]]
 	return lexicon
 
 def check_occurence(lexicon, corpus):
 	for word in corpus: 
-		if word in lexicon:
-			return "PASS"
+		if word in lexicon and (word !="ga" or word !="san") :
+			return "PASS", word
+	return "FAIL", "NO_HIT"
 
 if __name__ == "__main__": 
 	parser = argparse.ArgumentParser(description="text mining for medline file format")
@@ -66,9 +71,6 @@ if __name__ == "__main__":
 	tokenized_text=tokenize_remove_stop_words_stemmize(mytext)
 	tokenized_title=tokenize_remove_stop_words_stemmize(mytitle)
 	text_title = tokenized_text + tokenized_title
-	is_pass = check_occurence(lexicon, text_title)
-	print('processing PMID', PMID  )
-	if is_pass == "PASS":
-		print(PMID,"\t",is_pass)
-
-
+	is_pass, word = check_occurence(lexicon, text_title)
+	#if is_pass == "PASS":
+	print(PMID,"\t",is_pass, "\t", word)
