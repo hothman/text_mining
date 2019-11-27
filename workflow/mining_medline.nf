@@ -27,6 +27,7 @@ output_path="/home/houcemeddine/BILIM/precesion_med/workflow/mining_PubMed.txt"
 lines = PMID_list.readLines()
 
 process dowmloadXML {
+	errorStrategy 'ignore'   // necessary if the client could not connect to NCBI server
 	maxForks params.MAXFORKS
 
 	input:
