@@ -18,7 +18,7 @@ nextflow -log run1.log  run fetch_pmid_list.groovy clean --output pmid_gene_coun
 Which will generate a log file `run1.log`, clean up the cache and output the TSV file to `pmid_gene_country2.tsv` in the directory from which you are running the workflow `./`.
 
 ## Requirement
-  * Entrez Edirect: can be obtained from [](https://www.ncbi.nlm.nih.gov/books/NBK179288/). It can be also installed from [Bioconda channel](https://bioconda.github.io/recipes/entrez-direct/README.html)
+  * Entrez Edirect: can be obtained from [NCBI](https://www.ncbi.nlm.nih.gov/books/NBK179288/). It can be also installed from [Bioconda channel](https://bioconda.github.io/recipes/entrez-direct/README.html)
   * Python3.
   
  
